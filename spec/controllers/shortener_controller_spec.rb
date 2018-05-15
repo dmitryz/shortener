@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe ShortenerController do
   describe "Generate short url" do
-    subject { post("/") && response }
+    subject { post("/links") && response }
 
     its(:status) { is_expected.to eq 200 }
   end
@@ -10,7 +10,7 @@ RSpec.describe ShortenerController do
     let(:url) { "http://teeststs.com" }
     let(:id) { ShortenerService.create(url) }
 
-    subject { get("/#{id}") && response }
+    subject { get("/links/#{id}") && response }
 
     it "should redirect to original url" do
       expect(subject).to redirect_to(url)
