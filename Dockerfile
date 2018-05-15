@@ -1,4 +1,4 @@
-FROM ruby:2.3.1
+FROM ruby:2.4.3
 
 ENV INSTALL_PATH /usr/src/app
 
@@ -10,7 +10,6 @@ COPY . .
 RUN bundle install --deployment --without test development
 
 EXPOSE 3000
-EXPOSE 3010
 
 ENTRYPOINT ["bundle", "exec"]
 CMD ["rails", "server"]
