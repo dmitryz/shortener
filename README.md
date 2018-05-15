@@ -1,24 +1,42 @@
-# README
+Simple url shortener API
+========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of establishing Shortener API.
 
-Things you may want to cover:
+##Getting started
 
-* Ruby version
+1. Clone the repo
+  ```
+  $ git clone git@github.com:dmitryz/shortener.git
+  $ cd shortener
+  ```
 
-* System dependencies
+2. Install dependencies
+  ```
+  $ bundle install
+  ```
 
-* Configuration
+3. Whatch the specs pass
+  ```
+  $ bin/rspec
+  ```
+4. Docker
+  ```
+  docker build -t shortener .
+  docker run -p 3000:3000 shortener
+  ```
 
-* Database creation
 
-* Database initialization
+ ##API
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Create short url
+  ```
+  REQUEST: POST /links
+  BODY: url: http://test.com
+  RESPONSE: SHORT ID
+  ```
+2. Redirect via short id
+  ```
+  REQUEST: GET /links/short_id
+  RESPONSE: redirection to original url
+  ```
