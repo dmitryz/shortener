@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 RSpec.describe ShortenerController do
   it "Should create short url" do
     post(:create, params: { url: "http://test.co" })

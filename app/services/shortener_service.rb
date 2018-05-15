@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ShortenerService
   SHORTENER_BASE = 36
 
@@ -11,7 +13,7 @@ class ShortenerService
 
   private
 
-  def self.pack(shorted_url)
-    shorted_url.id.to_s(SHORTENER_BASE)
-  end
+    def self.pack(shorted_url)
+      shorted_url.id.to_s(SHORTENER_BASE)
+    end
 end

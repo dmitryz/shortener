@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ShortenerController < ApplicationController
   def create
     render json: ShortenerService.create(params[:url])
