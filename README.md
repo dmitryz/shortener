@@ -3,7 +3,7 @@ Simple url shortener API
 
 This is an example of establishing Shortener API.
 
-##Getting started
+## Getting started
 
 1. Clone the repo
   ```
@@ -27,7 +27,7 @@ This is an example of establishing Shortener API.
   ```
 
 
-##API
+## API
 
 1. Create short url
   ```
