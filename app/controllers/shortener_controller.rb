@@ -1,6 +1,6 @@
 class ShortenerController < ApplicationController
   def create
-    render json: ShortenerService.create(params[:id])
+    render json: ShortenerService.create(params[:url])
   end
 
   def show
