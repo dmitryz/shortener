@@ -4,7 +4,7 @@ class ShortenerService
   SHORTENER_BASE = 36
 
   def self.create(url)
-    pack(ShortedUrl.first_or_create(url: url))
+    pack(ShortedUrl.first_or_create!(url: url))
   end
 
   def self.restore(id)
