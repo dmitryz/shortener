@@ -5,6 +5,12 @@ RSpec.describe ShortenerService do
   let(:url) { "http://test.com" }
   let(:service) { described_class }
 
+  before do
+    10.times do |n|
+      ShortedUrl.create(url: "http://test#{n}.com")
+    end
+  end
+
   describe "when create is called" do
     subject { service.create(url) }
 
